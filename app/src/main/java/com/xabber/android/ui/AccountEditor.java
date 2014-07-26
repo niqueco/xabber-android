@@ -211,8 +211,9 @@ public class AccountEditor extends BaseSettingsActivity implements
 		putValue(
 				source,
 				R.string.account_tls_mode_key,
-				Integer.valueOf(accountItem.getConnectionSettings()
-						.getTlsMode().ordinal()));
+				accountItem.getConnectionSettings()
+					.getTlsMode().ordinal()
+		);
 		putValue(source, R.string.account_compression_key, accountItem
 				.getConnectionSettings().useCompression());
 		putValue(
@@ -231,7 +232,7 @@ public class AccountEditor extends BaseSettingsActivity implements
 		putValue(source, R.string.account_syncable_key,
 				accountItem.isSyncable());
 		putValue(source, R.string.account_archive_mode_key,
-				Integer.valueOf(accountItem.getArchiveMode().ordinal()));
+				accountItem.getArchiveMode().ordinal());
 		return source;
 	}
 

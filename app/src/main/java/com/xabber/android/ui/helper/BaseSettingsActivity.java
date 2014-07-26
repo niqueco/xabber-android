@@ -316,10 +316,9 @@ public abstract class BaseSettingsActivity extends ManagedPreferenceActivity
 		} else if (preference instanceof CheckBoxPreference)
 			return ((CheckBoxPreference) preference).isChecked();
 		else if (preference instanceof ListPreference)
-			return Integer
-					.valueOf(((ListPreference) preference)
-							.findIndexOfValue(((ListPreference) preference)
-									.getValue()));
+			return ((ListPreference) preference)
+				.findIndexOfValue(((ListPreference) preference)
+					.getValue());
 		else if (preference instanceof RingtonePreference)
 			return ((RingtonePreference) preference).getUri();
 		throw new IllegalStateException();

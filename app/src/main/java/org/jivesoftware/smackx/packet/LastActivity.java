@@ -110,7 +110,7 @@ public class LastActivity extends IQ {
                 String seconds = parser.getAttributeValue("", "seconds");
                 String message = parser.nextText();
                 if (seconds != null) {
-                    long xmlSeconds = new Double(seconds).longValue();
+                    long xmlSeconds = Double.valueOf(seconds).longValue();
                     lastActivity.setLastActivity((int)xmlSeconds);
                 }
 

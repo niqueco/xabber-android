@@ -22,7 +22,7 @@ import java.io.UnsupportedEncodingException;
  * Implements the DirectiveList class whihc will be used by the 
  * DigestMD5SaslClient class
  */
-class DirectiveList extends Object
+class DirectiveList
 {
     private static final int STATE_LOOKING_FOR_FIRST_DIRECTIVE  = 1;
     private static final int STATE_LOOKING_FOR_DIRECTIVE        = 2;

@@ -21,7 +21,7 @@ import org.apache.harmony.javax.security.sasl.*;
  * Implements the DigestChallenge class which will be used by the
  * DigestMD5SaslClient class
  */
-class DigestChallenge extends Object
+class DigestChallenge
 {
     public static final int QOP_AUTH           =    0x01;
     public static final int QOP_AUTH_INT       =    0x02;

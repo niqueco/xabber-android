@@ -656,11 +656,9 @@ public abstract class AbstractChat extends BaseEntity {
 		int count = PRELOADED_MESSAGES
 				+ NotificationManager.getInstance()
 						.getNotificationMessageCount(account, user);
-		Iterator<MessageItem> iterator = messages.iterator();
-		while (iterator.hasNext())
-			if (iterator.next().isIncoming()) {
-				count -= 1;
-				if (count <= 0)
+		for (MessageItem message : messages)
+			if (message.isIncoming()) {
+				if (--count <= 0)
 					return 0;
 			}
 		return count;

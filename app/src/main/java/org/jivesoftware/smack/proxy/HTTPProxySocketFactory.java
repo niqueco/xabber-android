@@ -73,8 +73,8 @@ class HTTPProxySocketFactory
         {
             String password = proxy.getProxyPassword();
             proxyLine = "\r\nProxy-Authorization: Basic "
-              + new String (Base64.encodeBytes((username + ":" 
-              + password).getBytes("UTF-8")));
+              + Base64.encodeBytes((username + ":"
+              + password).getBytes("UTF-8"));
         }
         socket.getOutputStream().write((hostport + " HTTP/1.1\r\nHost: "
             + hostport + proxyLine + "\r\n\r\n").getBytes("UTF-8"));

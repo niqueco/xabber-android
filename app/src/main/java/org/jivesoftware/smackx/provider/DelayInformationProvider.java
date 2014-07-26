@@ -194,8 +194,8 @@ public class DelayInformationProvider implements PacketExtensionProvider {
         Collections.sort(dates, new Comparator<Calendar>() {
 
             public int compare(Calendar o1, Calendar o2) {
-                Long diff1 = new Long(now.getTimeInMillis() - o1.getTimeInMillis());
-                Long diff2 = new Long(now.getTimeInMillis() - o2.getTimeInMillis());
+                Long diff1 = now.getTimeInMillis() - o1.getTimeInMillis();
+                Long diff2 = now.getTimeInMillis() - o2.getTimeInMillis();
                 return diff1.compareTo(diff2);
             }
             

@@ -317,10 +317,8 @@ public class Roster {
     	 Collection<String> addedEntries = new ArrayList<String>();
          Collection<String> updatedEntries = new ArrayList<String>();
          Collection<String> deletedEntries = new ArrayList<String>();
-         Iterator<RosterPacket.Item> iter = items.iterator();
-         while(iter.hasNext()){
-        	 insertRosterItem(iter.next(), addedEntries,updatedEntries,deletedEntries);
-         }
+         for (RosterPacket.Item item : items)
+              insertRosterItem(item, addedEntries, updatedEntries, deletedEntries);
          fireRosterChangedEvent(addedEntries, updatedEntries, deletedEntries);
     }
     

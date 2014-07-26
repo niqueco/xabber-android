@@ -20,7 +20,7 @@ import org.apache.harmony.javax.security.sasl.*;
  * are a directive value for a DigestMD5 authentication.The tokens are separated
  * commas.
  */
-class TokenParser extends Object
+class TokenParser
 {
     private static final int STATE_LOOKING_FOR_FIRST_TOKEN = 1;
     private static final int STATE_LOOKING_FOR_TOKEN       = 2;

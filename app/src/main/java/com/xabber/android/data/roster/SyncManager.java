@@ -552,7 +552,7 @@ public class SyncManager implements OnLoadListener, OnUnloadListener,
 	 * @param <T>
 	 * @return
 	 */
-	private <T extends AccountRelated, T2 extends Object> Map<T, T2> removeNotSyncable(
+	private <T extends AccountRelated, T2> Map<T, T2> removeNotSyncable(
 			Map<T, T2> collection) {
 		Iterator<Entry<T, T2>> iterator = collection.entrySet().iterator();
 		while (iterator.hasNext())
